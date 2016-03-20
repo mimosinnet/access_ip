@@ -4,8 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 sub get_ip {
   my $self = shift;
 
-	my $ip = `curl -s http://whatismyip.akamai.com/`;
-	chomp;
+	my $ip = $self->tx->remote_address;
 
 	$self->render(myip => $ip);
 }
