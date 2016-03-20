@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 sub get_ip {
   my $self = shift;
 
-	my $ip = $self->tx->remote_address;
+	my $ip = $self->req->headers->header('X-Real-IP');
 
 	$self->render(myip => $ip);
 }
