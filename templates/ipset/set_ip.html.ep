@@ -1,0 +1,6 @@
+% layout 'default';
+% title 'Defineix l\'Adreça IP';
+
+<p>S'ha donat accés a l'adreça ip <%= $host %>!</p> 
+
+<p><a href="/">Torna a l'inici</a></p>

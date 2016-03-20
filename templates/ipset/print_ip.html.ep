@@ -1,0 +1,13 @@
+% layout 'default';
+% title 'Print IP';
+
+%= form_for set_ip => (method => 'POST') => begin
+  Dona accés al host <%= $host %> <input type="hidden" name="host" value = <%= $host %> >
+	%= submit_button
+% end
+</p>
+
+<p><a href="/">Corregir l'Adreça IP</a></p>
+
+<!-- vim: tabstop=2
+-->
