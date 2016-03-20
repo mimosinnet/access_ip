@@ -4,7 +4,8 @@ use Mojo::Base 'Mojolicious::Controller';
 sub get_ip {
   my $self = shift;
 
-	my $ip = `dig +short myip.opendns.com \@resolver1.opendns.com`;
+	my $ip = `curl -s http://whatismyip.akamai.com/`;
+	chomp;
 
 	$self->render(myip => $ip);
 }
