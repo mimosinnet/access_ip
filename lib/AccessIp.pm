@@ -10,7 +10,6 @@ sub startup {
 
   # Normal route to controller
   $r->get('/')->to('ipset#get_ip');
-  $r->post('/print_ip')->to('ipset#print_ip');
   $r->post('/set_ip')->to('ipset#set_ip');
 }
 

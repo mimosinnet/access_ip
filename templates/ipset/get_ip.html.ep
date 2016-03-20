@@ -1,12 +1,8 @@
 % layout 'default';
 % title 'Seleccióna l\'Adreça IP';
-Dona accés a aquesta IP:
 
-%= form_for print_ip => (method => 'POST') => begin
-	<input name="d1" value="0" type="number" min="0" max="255">.
-	<input name="d2" value="0" type="number" min="0" max="255">.
-	<input name="d3" value="0" type="number" min="0" max="255">.
-	<input name="d4" value="0" type="number" min="0" max="255">
+%= form_for set_ip => (method => 'POST') => begin
+	Dona accés a la ip <input name="myip" value="<%= $myip %>" type="text">.
 	%= submit_button
 % end
 
